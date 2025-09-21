@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearView CPA | End Your Financial Stress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .checkmark-list li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2314b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+    <!-- Hero Section -->
+    <main class="bg-white">
+        <div class="container mx-auto px-6 pt-12 pb-20 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                Stop Overpaying The IRS. Start Outsmarting Them.
+            </h1>
+            <div class="mt-12 max-w-4xl mx-auto">
+                <ul class="checkmark-list text-left space-y-3 text-lg text-slate-700 font-medium">
+                    <li><strong>Proactive Tax Reduction:</strong> We don't just file taxes, we build a strategy to legally reduce them year-round.</li>
+                    <li><strong>Dedicated Expert Support:</strong> Get a dedicated CPA who knows your business inside and out. No more call centers.</li>
+                    <li><strong>Complete Peace of Mind:</strong> Sleep soundly knowing your books are clean, compliant, and optimized for growth.</li>
+                </ul>
+            </div>
+             <div class="mt-12">
+                <a href="#offer" class="bg-yellow-400 text-slate-900 font-extrabold px-10 py-5 rounded-lg text-xl hover:bg-yellow-500 transition duration-300 shadow-2xl inline-block transform hover:scale-105">
+                    YES! I Want to Save on Taxes!
+                </a>
+                <p class="mt-3 text-sm text-slate-500">Free, No-Obligation Financial Analysis</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Problem Section -->
+    <section class="py-20 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-red-600">Audit Fear & Scrambles</h3>
+                    <p class="mt-2 text-slate-600">Dreading tax season? That last-minute scramble to find documents and pray you did it right is stressful and leads to costly errors.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-red-600">Missed Growth Opportunities</h3>
+                    <p class="mt-2 text-slate-600">Without clear financial data, you can't make smart decisions. You're flying blind on pricing, hiring, and investing.</p>
+                </div>
+                 <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-red-600">Wasted Hours on Bookkeeping</h3>
+                    <p class="mt-2 text-slate-600">Your time is valuable. Every hour you spend trying to be an accountant is an hour you're not spending on growing your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p>&copy; 2025 ClearView CPA. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">Stop guessing. Start growing. Let's clarify your finances.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form Submission
+        const form = document.getElementById('cta-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            const nameInput = document.getElementById('name-input');
+            const emailInput = document.getElementById('email-input');
+            if (emailInput.value && nameInput.value) {
+                form.querySelector('.space-y-4').classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            }
+        });
+
+        // FAQ Accordion
+        const faqContainer = document.getElementById('faq-container');
+        faqContainer.addEventListener('click', (e) => {
+            const questionButton = e.target.closest('.faq-question');
+            if (questionButton) {
+                const answer = questionButton.nextElementSibling;
+                const icon = questionButton.querySelector('svg');
+
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            }
+        });
+    </script>
+
+</body>
+</html>
+
